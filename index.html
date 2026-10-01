@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 4: Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Englebert&display=swap");
+
+    body {
+      font-family: "Englebert", sans-serif;
+      background: #f8f9fa;
+    }
+
+    h1, h2, .navbar-brand {
+      font-family: "Aclonica", sans-serif;
+    }
+
+    .hero {
+      min-height: 550px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.4;
+    }
+
+    .hero h1 span {
+      color: #0dcaf0;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hero-img {
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    }
+
+    .card {
+      border: 0;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,.1);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-text {
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">TOWER OF GOD</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#karakter">Karakter</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              Link
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item"
+                  href="https://towerofgod.fandom.com/wiki/Twenty-Fifth_Baam">
+                  Baam
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://towerofgod.fandom.com/wiki/Khun_Aguero_Agnis">
+                  Khun Aguero Agnis
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://towerofgod.fandom.com/wiki/Rak_Wraithraiser">
+                  Rak Wraithraiser
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://www.webtoons.com/id/fantasy/tower-of-god/list?title_no=749">
+                  WEBTOON
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://towerofgod.fandom.com/wiki/Tower_of_God_Wiki">
+                  TOG Wiki
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn btn-outline-success" href="#">Daftar</a>
+            <a class="btn btn-primary" href="#">Masuk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+
+        <div class="col-lg-7">
+          <h1>
+            Komik Legendaris Webtoon<br>
+            <span>TOWER OF GOD</span>
+          </h1>
+
+          <p class="mt-3">
+            Tower Of God adalah manhwa Korea Selatan populer yang ditulis dan
+            diilustrasikan oleh S.I.U. Ceritanya berpusat pada Bam ke-25,
+            seorang pemuda yang hidup di bawah tanah bersama teman dekatnya,
+            Rachel.
+          </p>
+
+          <p>
+            Ketika Rachel meninggalkannya untuk mendaki Menara misterius,
+            Bam nekat memasuki Menara demi menyusulnya. Di dalam Menara,
+            siapa pun yang berhasil mencapai puncak dipercaya bisa mendapatkan
+            apa pun yang mereka inginkan.
+          </p>
+
+          <a href="https://www.webtoons.com/id/fantasy/tower-of-god/list?title_no=749"
+            class="btn btn-info">
+            Baca Disini!
+          </a>
+        </div>
+
+        <div class="col-lg-5 text-center">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAeBKOE-FaOL8t1R1kPt5u8mcHY3IenYwHhhNxynDepQ&s=10"
+            class="img-fluid hero-img"
+            alt="Cover Komik TOG">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="karakter" class="container py-5">
+    <h2 class="text-center mb-4">Karakter Utama</h2>
+
+    <div class="row g-4 justify-content-center">
+
+    
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWXQdGrAkHWjesqDf2Ir2xyxWukfYBBomgWYV3QRGVg&s=10"
+            class="card-img-top"
+            alt="Bam 25th">
+
+          <div class="card-body text-center">
+            <h5 class="card-title">Twenty-Fifth Baam</h5>
+
+            <p class="card-text">
+              Twenty-Fifth Baam adalah seorang Irregular yang memasuki Menara
+              demi menyusul Rachel. Perjalanannya membuatnya berkembang dari
+              sosok polos menjadi salah satu karakter terkuat di Menara.
+            </p>
+
+            <a href="https://towerofgod.fandom.com/wiki/Twenty-Fifth_Baam"
+              class="btn btn-info">
+              Info
+            </a>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img
+            src="https://cdn.theouterhaven.net/wp-content/uploads/2020/06/khun-aguero-agnis-tower-of-god-anime-uhdpaper.com-4K-7.1948-wp.thumbnail.jpg"
+            class="card-img-top"
+            alt="Khun">
+
+          <div class="card-body text-center">
+            <h5 class="card-title">Khun Aguero Agnis</h5>
+
+            <p class="card-text">
+              Khun Aguero Agnis adalah seorang bangsawan yang cerdas dan ahli
+              strategi. Ia menjadi salah satu teman terdekat Baam dan sering
+              membantu kelompoknya menghadapi berbagai ujian.
+            </p>
+
+            <a href="https://towerofgod.fandom.com/wiki/Khun_Aguero_Agnis"
+              class="btn btn-info">
+              Info
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img
+            src="https://images8.alphacoders.com/138/1380798.png"
+            class="card-img-top"
+            alt="Rak">
+
+          <div class="card-body text-center">
+            <h5 class="card-title">Rak Wraithraiser</h5>
+
+            <p class="card-text">
+              Rak Wraithraiser adalah seorang prajurit yang memiliki sifat
+              buas dan impulsif. Meskipun begitu, ia memiliki hubungan
+              persahabatan yang kuat dengan Baam dan Khun.
+            </p>
+
+            <a href="https://towerofgod.fandom.com/wiki/Rak_Wraithraiser"
+              class="btn btn-info">
+              Info
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
